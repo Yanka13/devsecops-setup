@@ -113,7 +113,7 @@ clip < ~/.ssh/id_ed25519.pub
 
 #### Option B - Upload SSH key on Google Form
 
-<!-- TODO with LeWagon Engineering Team -->
+`<!-- TODO with LeWagon Engineering Team -->`
 
 
 
@@ -122,9 +122,9 @@ clip < ~/.ssh/id_ed25519.pub
 
 _Note: The following section requires you already have a [GitHub](https://github.com/) account and that you have generated an SSH key & upload the public key already.
 
-<!-- TODO with LeWagon Engineering Team -->
+`<!-- TODO with LeWagon Engineering Team -->`
 
-<!-- In this section, we should let students know what will happen now (wait a few minutes for VM provioning before receiving an email with the IP adress?) -->
+`<!-- In this section, we should let students know what will happen now (wait a few minutes for VM provioning before receiving an email with the IP adress?) -->`
 
 
 ## Visual Studio Code
@@ -340,9 +340,9 @@ It will create the Virtualenv for this folder, using Python 3.8 as [specified](h
 ### Add a service account key 🔑
 
 
-<!-- TODO with OnePoint -->
+`<!-- TODO with OnePoint -->`
 
 ## Stop VM 
 
-<!-- TODO -->
+`<!-- TODO -->`
 
