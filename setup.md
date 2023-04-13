@@ -85,30 +85,30 @@ clip < ~/.ssh/id_ed25519.pub
 
 #### Option A - Upload SSH key on GitHub
 
-- 1. On GitHub.com In the upper-right corner of any page, click your profile photo, then click Settings.
+1. On GitHub.com In the upper-right corner of any page, click your profile photo, then click Settings.
 
-<img alt="VSCode extensions - Search - Remote" src="https://docs.github.com/assets/cb-139735/mw-1000/images/help/settings/userbar-account-settings.webp" height=400 width=300>
+<img alt="VSCode extensions - Search - Remote" src="https://docs.github.com/assets/cb-139735/mw-1000/images/help/settings/userbar-account-settings.webp" height=500 width=300>
 
 
-- 2. In the "Access" section of the sidebar, click 🔑 SSH and GPG keys.
+2. In the "Access" section of the sidebar, click 🔑 SSH and GPG keys.
 
-- 3. Click **New SSH key** or **Add SSH key**.
+3. Click **New SSH key** or **Add SSH key**.
 
 <img alt="VSCode extensions - Search - Remote" src="https://docs.github.com/assets/cb-28257/mw-1000/images/help/settings/ssh-add-ssh-key-with-auth.webp" width=500>
 
-- 3. In the "Title" field, add a descriptive label for the new key. For example, if you're using a professional laptop, you might call this key "Professional laptop".
+4. In the "Title" field, add a descriptive label for the new key. For example, if you're using a professional laptop, you might call this key "Professional laptop".
 
-- 5. Select the type of key, either authentication or signing. For more information about commit signing, see "About commit signature verification."
+5. Select the type of key, either authentication or signing. For more information about commit signing, see "About commit signature verification."
 
-- 6. Paste your public key into the "Key" field.
+6. Paste your public key into the "Key" field.
 
 <img alt="VSCode extensions - Search - Remote" src="https://docs.github.com/assets/cb-47495/mw-1000/images/help/settings/ssh-key-paste-with-type.webp" width=500>
 
-- 7. Click **Add SSH key**
+7. Click **Add SSH key**
 
-<img alt="VSCode extensions - Search - Remote" src="https://docs.github.com/assets/cb-6592/mw-1000/images/help/settings/ssh-add-key.webp" width=500>
+<img alt="VSCode extensions - Search - Remote" src="https://docs.github.com/assets/cb-6592/mw-1000/images/help/settings/ssh-add-key.webp" width=400>
 
-- 8. If prompted, confirm access to your account on GitHub. For more information, see "Sudo mode."
+8. If prompted, confirm access to your account on GitHub. For more information, see "Sudo mode."
 
 
 #### Option B - Upload SSH key on Google Form
@@ -301,11 +301,6 @@ To check if this step is done, run:
 ```bash
 ssh -T git@github.com
 ```
-To check if this step is done, run:
-
-```bash
-ssh -T git@github.com
-```
 
 If it says "Permission denied", call a teacher to help you. If it says "Hi <github_nickname>", all good!
 
@@ -346,4 +341,8 @@ It will create the Virtualenv for this folder, using Python 3.8 as [specified](h
 
 
 <!-- TODO with OnePoint -->
+
+## Stop VM 
+
+<!-- TODO -->
 
