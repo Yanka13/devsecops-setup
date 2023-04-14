@@ -337,7 +337,7 @@ It will create the Virtualenv for this folder, using Python 3.8 as [specified](h
 
 ## AWS
 
-### Add a service account key 🔑
+### Join the AWS Organization and put credentials in the VM 🔑
 
 
 `<!-- TODO with OnePoint -->`
