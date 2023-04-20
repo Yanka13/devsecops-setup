@@ -84,7 +84,7 @@ clip < ~/.ssh/devsecops.pub
 - Upload SSH key on Google Form
 
 Let's now upload your public ssh key on a [Google Form](https://forms.gle/iWPmNvK6bRn2R1qy9) so that our Engineering team can use it to assign you a VM . 
-Please go over this link and answer the questions by filling out your name and the public key you just created.
+Please go over this link and answer the questions by filling out your name, your email, and the public key you just created.
   
  Make sure that it looks like this :
  ```bash
