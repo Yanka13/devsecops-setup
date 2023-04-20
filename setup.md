@@ -83,7 +83,7 @@ clip < ~/.ssh/devsecops.pub
 
 - Upload SSH key on Google Form
 
-Let's now upload your public ssh key on a (Google Form)[https://forms.gle/iWPmNvK6bRn2R1qy9] so that our Engineering team can use it to assign you a VM . 
+Let's now upload your public ssh key on a [Google Form](https://forms.gle/iWPmNvK6bRn2R1qy9) so that our Engineering team can use it to assign you a VM . 
 Please go over this link and answer the questions by filling out your name and the public key you just created.
   
  Make sure that it looks like this :
@@ -91,10 +91,9 @@ Please go over this link and answer the questions by filling out your name and t
   ssh-ed25519 SOME_STUFF_HERE lewagon
 ```
 
- When it is done, wait a few minutes, we will provision a VM for you containing all the tools you will need, and you will be able to connect to it safely through SSH.
+ When it is done, wait a few minutes, we will provision a VM for you containing all the tools you will need and send you an email once it is done with your VM IP address! 
 
-## Confirm  Virtual Machine provisioning and retrieve IP address
-
+## Connect to the VM through VS Code
 
 _Note: The following section requires you already have received the VM provisioning confirmation as well as the IP address of the VM we assigned you with.
 
