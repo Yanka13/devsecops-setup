@@ -33,8 +33,7 @@ We highly recommend installing [Windows Terminal](https://apps.microsoft.com/sto
   <summary markdown='span'>MacOS & Linux</summary>
 
 ```bash
-EMAIL="your_email@example.com" # replace with your github account email
-ssh-keygen -t ed25519 -C $EMAIL
+ssh-keygen -t ed25519 -C lewagon -f ~/.ssh/devsecops
 ```
 
 </details>
@@ -43,8 +42,8 @@ ssh-keygen -t ed25519 -C $EMAIL
   <summary markdown='span'>Windows</summary>
 
 ```bash
-EMAIL="your_email@example.com" # replace with your github account email
-ssh-keygen.exe -t ed25519 -C $EMAIL
+ssh-keygen.exe -t ed25519 -C lewagon -f ~/.ssh/devsecops
+```
 ```
 </details>
 
@@ -61,14 +60,15 @@ You should get the following message: `> Generating public/private algorithm key
 
 ### Upload public KEY
 
+
 - In your terminal, copy your public SSH key
 
 <details>
   <summary markdown='span'>MacOs & Linux</summary>
 
 ```bash
-pbcopy < ~/.ssh/id_ed25519.pub
-# Copies the contents of the id_ed25519.pub file to your clipboard
+pbcopy < ~/.ssh/devsecops.pub
+# Copies the contents of the devsecops.pub file to your clipboard
 ```
 
 </details>
@@ -77,54 +77,28 @@ pbcopy < ~/.ssh/id_ed25519.pub
   <summary markdown='span'>Windows</summary>
 
 ```bash
-clip < ~/.ssh/id_ed25519.pub
-# Copies the contents of the id_ed25519.pub file to your clipboard
+clip < ~/.ssh/devsecops.pub
+# Copies the contents of the devsecops.pub file to your clipboard
 ```
+                            
 </details>
 
+- Upload SSH key on Google Form
 
-#### Option A - Upload SSH key on GitHub
+Let's now upload your public ssh key on a (Google Form)[https://forms.gle/iWPmNvK6bRn2R1qy9] so that our Engineering team can use it to assign you a VM . 
+Please go over this link and answer the questions by filling out your name and the public key you just created.
+  
+ Make sure that it looks like this :
+ ```bash
+  ssh-ed25519 SOME_STUFF_HERE lewagon
+```
 
-1. On GitHub.com In the upper-right corner of any page, click your profile photo, then click Settings.
-
-<img alt="VSCode extensions - Search - Remote" src="https://docs.github.com/assets/cb-139735/mw-1000/images/help/settings/userbar-account-settings.webp" height=500 width=300>
-
-
-2. In the "Access" section of the sidebar, click 🔑 SSH and GPG keys.
-
-3. Click **New SSH key** or **Add SSH key**.
-
-<img alt="VSCode extensions - Search - Remote" src="https://docs.github.com/assets/cb-28257/mw-1000/images/help/settings/ssh-add-ssh-key-with-auth.webp" width=500>
-
-4. In the "Title" field, add a descriptive label for the new key. For example, if you're using a professional laptop, you might call this key "Professional laptop".
-
-5. Select the type of key, either authentication or signing. For more information about commit signing, see "About commit signature verification."
-
-6. Paste your public key into the "Key" field.
-
-<img alt="VSCode extensions - Search - Remote" src="https://docs.github.com/assets/cb-47495/mw-1000/images/help/settings/ssh-key-paste-with-type.webp" width=500>
-
-7. Click **Add SSH key**
-
-<img alt="VSCode extensions - Search - Remote" src="https://docs.github.com/assets/cb-6592/mw-1000/images/help/settings/ssh-add-key.webp" width=400>
-
-8. If prompted, confirm access to your account on GitHub. For more information, see "Sudo mode."
-
-
-#### Option B - Upload SSH key on Google Form
-
-`<!-- TODO with LeWagon Engineering Team -->`
-
-
+ When it is done, wait a few minutes, we will provision a VM for you containing all the tools you will need, and you will be able to connect to it safely through SSH.
 
 ## Confirm  Virtual Machine provisioning and retrieve IP address
 
 
-_Note: The following section requires you already have a [GitHub](https://github.com/) account and that you have generated an SSH key & upload the public key already.
-
-`<!-- TODO with LeWagon Engineering Team -->`
-
-`<!-- In this section, we should let students know what will happen now (wait a few minutes for VM provioning before receiving an email with the IP adress?) -->`
+_Note: The following section requires you already have received the VM provisioning confirmation as well as the IP address of the VM we assigned you with.
 
 
 ## Visual Studio Code
@@ -141,7 +115,6 @@ Let's install [Visual Studio Code](https://code.visualstudio.com) text editor.
 ![VS Code installation options](https://github.com/lewagon/setup/blob/master/images/windows_vscode_installation.png)
 
 When the installation is finished, launch VS Code.
-
 
 ### VS Code Remote SSH Extension
 
