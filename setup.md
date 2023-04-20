@@ -35,7 +35,6 @@ We highly recommend installing [Windows Terminal](https://apps.microsoft.com/sto
 ```bash
 ssh-keygen -t ed25519 -C lewagon -f ~/.ssh/devsecops
 ```
-
 </details>
 
 <details>
@@ -43,7 +42,6 @@ ssh-keygen -t ed25519 -C lewagon -f ~/.ssh/devsecops
 
 ```bash
 ssh-keygen.exe -t ed25519 -C lewagon -f ~/.ssh/devsecops
-```
 ```
 </details>
 
