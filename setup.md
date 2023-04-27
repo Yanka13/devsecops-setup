@@ -49,7 +49,7 @@ You should get the following message: `> Generating public/private algorithm key
 ```text
 
 Generating public/private ed25519 key pair.
-Enter file in which to save the key (/Users/username/.ssh/id_ed25519): /Users/username/.ssh/id_ed2ddd
+Enter file in which to save the key (/Users/username/.ssh/id_ed25519):
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
 Your identification has been saved in /Users/username/.ssh/id_ed2ddd.
@@ -87,7 +87,7 @@ ssh-keygen.exe -t ed25519 -C lewagon
 
 You should get the following message: `> Generating public/private algorithm key pair.`
 
-- When you are prompted `> Enter file in which to save the key (C:\Users\username/.ssh/id_ed25519):`, press Enter
+- When you are prompted `> Enter file in which to save the key (C:\Users\username\.ssh\id_ed25519):`, press Enter
 - You should be asked to `Enter a passphrase`, type a secure passphrase, it is like a password, but longer.
 
 ℹ️ Don't worry if nothing prompt when you type, that is perfectly normal for security reasons.
@@ -100,7 +100,7 @@ You should get the following message: `> Generating public/private algorithm key
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
 Your identification has been saved in C:\Users\username\.ssh\id_ed25519.
-Your public key has been saved inC:\Users\username\.ssh\id_ed25519.pub.
+Your public key has been saved in C:\Users\username\.ssh\id_ed25519.pub.
 
 
 
@@ -126,6 +126,7 @@ The key's randomart image is:
 Now you have a public/private ed25519 key pair in the location specified. The `.pub` files are public keys, and files without an extension are private keys.
 
 </details>
+
 ### Upload public KEY
 
 Let's now send your public key to the LeWagon Engineering team so that we can place it on the Virtual Machine we will provide to you. Once it is done, you'll be able to connect to it through SSH.
@@ -211,8 +212,7 @@ That's the only extension you should install on your _local_ machine, we will in
 <img alt="vscode-connect-to-host" src="https://wagon-public-datasets.s3.amazonaws.com/data-engineering/setup/vscode-connect-to-host.png" width=500>
 
 - Click on `Add a new host`
-- Type `ssh -i <path/to/your/private/key> lewagon@<ip address>`, for instance, with private key at `~/.ssh/ed25519`, with a public IP of `34.77.50.76`, I'll type `ssh -i ~/.ssh/ed25519 lewagon@34.77.50.76` for a Mac/Linux machine and `ssh -i C:\Users\username\.ssh\id_ed25519.pub` for a Windows one.
-lewagon@34.77.50.76`
+- Type `ssh -i <path/to/your/private/key> lewagon@<ip address>`, for instance, with private key at `~/.ssh/ed25519`, with a public IP of `34.77.50.76`, I'll type `ssh -i ~/.ssh/ed25519 lewagon@34.77.50.76` for a Mac/Linux machine and `ssh -i C:\Users\username\.ssh\id_ed25519.pub lewagon@34.77.50.76` for a Windows one.
 
 <img alt="vscode-ssh-connection-command" src="https://wagon-public-datasets.s3.amazonaws.com/data-engineering/setup/vscode-ssh-connection-command.png" width=500>
 
