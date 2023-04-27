@@ -216,7 +216,7 @@ That's the only extension you should install on your _local_ machine, we will in
 <img alt="vscode-connect-to-host" src="https://wagon-public-datasets.s3.amazonaws.com/data-engineering/setup/vscode-connect-to-host.png" width=500>
 
 - Click on `Add a new host`
-- Type `ssh -i <path/to/your/private/key> lewagon@<ip address>`, for instance, with private key at `~/.ssh/ed25519`, with a public IP of `34.77.50.76`, I'll type `ssh -i ~/.ssh/ed25519 lewagon@34.77.50.76` for a Mac/Linux machine and `ssh -i C:\Users\username\.ssh\id_ed25519.pub lewagon@34.77.50.76` for a Windows one.
+- Type `ssh -i <path/to/your/private/key> lewagon@<ip address>`, for instance, with private key at `~/.ssh/ed25519`, with a public IP of `34.77.50.76`, I'll type `ssh -i ~/.ssh/ed25519 lewagon@34.77.50.76` for a Mac/Linux machine and `ssh -i C:\Users\username\.ssh\id_ed25519 lewagon@34.77.50.76` for a Windows one.
 
 <img alt="vscode-ssh-connection-command" src="https://wagon-public-datasets.s3.amazonaws.com/data-engineering/setup/vscode-ssh-connection-command.png" width=500>
 
