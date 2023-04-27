@@ -105,7 +105,7 @@ Your public key has been saved in C:\Users\username\.ssh\id_ed25519.pub.
 
 
 The key fingerprint is:
-SHA256:OIzc1yE7joL2Bzy8!gS0j8eGK7bYaH1FmF3sDuMeSj8 username@LOCAL-HOSTNAME
+SHA256:OIzc1yE7joL2Bzy8!gS0j8eGK7bYaH1FmF3sDuMeSj8 lewagon
 
 The key's randomart image is:
 +--[ED25519 256]--+
@@ -137,9 +137,13 @@ Let's now send your public key to the LeWagon Engineering team so that we can pl
   <summary markdown='span'>MacOs & Linux </summary>
 
 ```bash
-cbcopy < ~/.ssh/devsecops.pub
-# Copy the content of the id_ed25519.pub file. Replace ~/.ssh/id_ed25519.pub with your public key path
+cat < ~/.ssh/id_ed25519.pub
+# <Display the content of the id_ed25519.pub file. Replace ~/.ssh/id_ed25519.pub with your public key path
 ```
+
+Copy the output. 
+
+```ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOkPUdnhB5beA8vzNXbCMz0RJIFISrcm96ZXrfzhtYLO lewagon```
 
 </details>
 
@@ -153,7 +157,7 @@ Get-Content -Path $env:USERPROFILE\.ssh\id_ed25519.pub
 # Display the content of the id_ed25519.pub file. Replace id_ed25519.pub with your public key path
 ```
 
-Copy the content. It should look like this ```ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOkPUdnhB5beA8vzNXbCMz0RJIFISrcm96ZXrfzhtYLO lewagon```
+Copy the output. It should look like this ```ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOkPUdnhB5beA8vzNXbCMz0RJIFISrcm96ZXrfzhtYLO lewagon```
 
 In case you have any issues, feel free to refer to this [section](<https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement>)
 
