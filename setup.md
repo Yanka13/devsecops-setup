@@ -2,7 +2,7 @@
 
 You will find below the instructions to set up your computer for [Le Wagon DevSecOps course](https://www.lewagon.com/)
 
-A part of the setup will be done on your **local machine** but most of the configuration will be done on a **virtual machine already configured** containing with all the tools you will need (Python, Docker, Terraform, and much more!).
+A part of the setup will be done on your **local machine** but most of the configuration will be done on a **Linux virtual machine already configured** containing with all the tools you will need (Python, Docker, Terraform, and much more!).
 
 Please **read instructions carefully and execute all commands in the following order**.
 
@@ -33,76 +33,156 @@ We highly recommend installing [Windows Terminal](https://apps.microsoft.com/sto
   <summary markdown='span'>MacOS & Linux</summary>
 
 ```bash
-ssh-keygen -t ed25519 -C lewagon -f ~/.ssh/devsecops
+ssh-keygen -t ed25519 -C lewagon
 ```
-</details>
-
-<details>
-  <summary markdown='span'>Windows</summary>
-
-```bash
-ssh-keygen.exe -t ed25519 -C lewagon -f ~/.ssh/devsecops
-```
-</details>
 
 You should get the following message: `> Generating public/private algorithm key pair.`
-- When you are prompted `> Enter a file in which to save the key`, press Enter
+
+- When you are prompted `> Enter file in which to save the key (/Users/username/.ssh/id_ed25519):`, press Enter
 - You should be asked to `Enter a passphrase`, type a secure passphrase, it is like a password, but longer.
 
 ℹ️ Don't worry if nothing prompt when you type, that is perfectly normal for security reasons.
 
 - You should be asked to `Enter same passphrase again`, do it.
 
-**❗️ You must remember this passphrase.**
+ The passphrase works with the key file to provide two-factor authentication. For this example, we're leaving the passphrase empty.
 
+```text
 
-### Upload public KEY
-
-
-- In your terminal, copy your public SSH key
-
-<details>
-  <summary markdown='span'>MacOs & Linux</summary>
-
-```bash
-pbcopy < ~/.ssh/devsecops.pub
-# Copies the contents of the devsecops.pub file to your clipboard
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/Users/username/.ssh/id_ed25519): /Users/username/.ssh/id_ed2ddd
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /Users/username/.ssh/id_ed2ddd.
+Your public key has been saved in /Users/username/.ssh/id_ed2ddd.pub.
+The key fingerprint is:
+SHA256:yJeb4MleZGDx0wQuUiakxqYb4AGThcnVF4uWgzva4LQ lewagon
+The key's randomart image is:
++--[ED25519 256]--+
+|+=oo+ +.o..      |
+|=+ ..=o=.o       |
+|..=..==.+ .      |
+|o+. o+.+ o       |
+|o+ o  + S        |
+|oo= .o * o       |
+|.E .  + +        |
+|     . .         |
+|      .          |
++----[SHA256]-----+
 ```
+
+**❗️ You must remember this passphrase and the path of your private key.**
+
+Now you have a public/private ed25519 key pair in the location specified. The .pub files are public keys, and files without an extension are private keys.
+
 
 </details>
 
 <details>
   <summary markdown='span'>Windows</summary>
 
+To generate key files using the Ed25519 algorithm, run the following command from a PowerShell or cmd prompt on your client:
+
 ```bash
-clip < ~/.ssh/devsecops.pub
-# Copies the contents of the devsecops.pub file to your clipboard
+ssh-keygen.exe -t ed25519 -C lewagon
 ```
-                            
+
+
+You should get the following message: `> Generating public/private algorithm key pair.`
+
+- When you are prompted `> Enter file in which to save the key (C:\Users\username/.ssh/id_ed25519):`, press Enter
+- You should be asked to `Enter a passphrase`, type a secure passphrase, it is like a password, but longer.
+
+ℹ️ Don't worry if nothing prompt when you type, that is perfectly normal for security reasons.
+
+- You should be asked to `Enter same passphrase again`, do it.
+
+
+ The passphrase works with the key file to provide two-factor authentication. For this example, we're leaving the passphrase empty.
+
+```text
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in C:\Users\username/.ssh/id_ed25519.
+Your public key has been saved in C:\Users\username/.ssh/id_ed25519.pub.
+The key fingerprint is:
+SHA256:OIzc1yE7joL2Bzy8!gS0j8eGK7bYaH1FmF3sDuMeSj8 username@LOCAL-HOSTNAME
+
+The key's randomart image is:
++--[ED25519 256]--+
+|        .        |
+|         o       |
+|    . + + .      |
+|   o B * = .     |
+|   o= B S .      |
+|   .=B O o       |
+|  + =+% o        |
+| *oo.O.E         |
+|+.o+=o. .        |
++----[SHA256]-----+
+```
+
+**❗️ You must remember this passphrase and the path of your private key.**
+
+Now you have a public/private ed25519 key pair in the location specified. The .pub files are public keys, and files without an extension are private keys.
+
+</details>
+
+### Upload public KEY
+
+Let's now send your public key to LeWagon Engineering team, so that we can store it on a VM we will provision for you. Once it is done, you'll be able to connect to it through SSH.
+
+The contents of your public ke needs to be placed on the VM.
+
+- In your terminal, copy your public SSH key
+
+<details>
+  <summary markdown='span'>MacOs & Linux </summary>
+
+```bash
+cbcopy < ~/.ssh/devsecops.pub
+# Copy the content of the id_ed25519.pub file. Replace ~/.ssh/id_ed25519.pub with your public key path
+```
+</details>
+
+<details>
+  <summary markdown='span'>Windows</summary>
+
+
+With Windows PowerShell
+
+```bash
+Get-Content -Path $env:USERPROFILE\.ssh\id_ed25519.pub
+# Display the content of the id_ed25519.pub file. Replace id_ed25519.pub with your public key path
+```
+
+Copy the content.
+
+In case you have any issue, feel free to refer to this [section](<https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement>)
+
 </details>
 
 - Upload SSH key on Google Form
 
-Let's now upload your public ssh key on a [Google Form](https://forms.gle/iWPmNvK6bRn2R1qy9) so that our Engineering team can use it to assign you a VM . 
+Let's now upload your public ssh key on a [Google Form](https://forms.gle/iWPmNvK6bRn2R1qy9) so that our Engineering team can use it to assign you a VM .
 Please go over this link and answer the questions by filling out your name, your email, and the public key you just created.
-  
- Make sure that it looks like this :
+
+ Make sure that the public keys match this pattern :
  ```bash
   ssh-ed25519 SOME_STUFF_HERE lewagon
 ```
 
- When it is done, wait a few minutes, we will provision a VM for you containing all the tools you will need and send you an email once it is done with your VM IP address! 
+ When it is done, wait a few minutes, we will provision a VM for you containing all the tools you will need and send you an email once it is done with your VM IP address! Check your mail, ask TA if you are stuck here.
 
 ## Connect to the VM through VS Code
 
 _Note: The following section requires you already have received the VM provisioning confirmation as well as the IP address of the VM we assigned you with.
 
-
 ## Visual Studio Code
 
 ### Installation
 
-Let's install [Visual Studio Code](https://code.visualstudio.com) text editor.
+Have you installed VSCode already? If not, let's install [Visual Studio Code](https://code.visualstudio.com) text editor.
 
 - Go to [Visual Studio Code download page](https://code.visualstudio.com/download).
 - Click on "Windows" button
@@ -134,7 +214,7 @@ That's the only extension you should install on your _local_ machine, we will in
 <img alt="vscode-connect-to-host" src="https://wagon-public-datasets.s3.amazonaws.com/data-engineering/setup/vscode-connect-to-host.png" width=500>
 
 - Click on `Add a new host`
-- Type `ssh -i <path/to/your/private/key> <username>@<ip address>`, for instance, my username is `somedude`, and private key at `~/.ssh/id_rsa`, with a public IP of `34.77.50.76`, I'll type `ssh -i ~/.ssh/id_rsa somedude@34.77.50.76`
+- Type `ssh -i <path/to/your/private/key> lewagon@<ip address>`, for instance, with private key at `~/.ssh/ed25519`, with a public IP of `34.77.50.76`, I'll type `ssh -i ~/.ssh/ed25519 lewagon@34.77.50.76`
 
 <img alt="vscode-ssh-connection-command" src="https://wagon-public-datasets.s3.amazonaws.com/data-engineering/setup/vscode-ssh-connection-command.png" width=500>
 
@@ -161,32 +241,10 @@ That's the only extension you should install on your _local_ machine, we will in
 <br>
 <img alt="vscode-terminal" src="https://wagon-public-datasets.s3.amazonaws.com/data-engineering/setup/vscode-terminal.png" width=500>
 
-- Still on your *local* computer, lets create a more readable version of your machine to connect to!
-
-```bash
-code ~/.ssh/config
-```
-
-You should see something like the following:
-
-```bash
-Host <machine ip>
-  HostName <machine ip>
-  IdentityFile <file path for your ssh key>
-  User <username>
-```
-You can now change Host to whatever you would like to see as the name of your connection or in terminal with `ssh <Host>`!
-
-```bash
-# For instance
-Host "devsecops bootcamp"
-  HostName 35.240.107.210
-  IdentityFile <file path for your ssh key>
-  User <username>
-```
 
 **The setup of your local machine is over. All following commands will be run from within your 🚨 virtual machine**🚨 terminal (via VS code for instance)
 
+---
 
 ## VS Code Extensions
 
@@ -237,7 +295,6 @@ gh auth login -s 'user:email' -w
 gh will ask you few questions:
 
 `What is your preferred protocol for Git operations?` With the arrows, choose `SSH` and press `Enter`. SSH is a protocol to log in using SSH keys instead of the well known username/password pair.
-
 
 `Generate a new SSH key to add to your GitHub account?` Press `Enter` to ask gh to generate the SSH keys for you.
 
@@ -309,10 +366,22 @@ It will create the Virtualenv for this folder, using Python 3.8 as [specified](h
 
 ### Join the AWS Organization and put credentials in the VM 🔑
 
+TODO ONE POINT
 
-`<!-- TODO with OnePoint -->`
+## Further notes about your VM
 
-## Stop VM 
+The VM you will work with is a Linux Ubuntu machine with the following tools installed :
 
-`<!-- TODO -->`
+- Python 3.8.6 with pipenv
+- Docker & Docker Compose
+- Terraform
+- AWS CLIs
+- Github CLI
+
+The default shell is zsh, an extension over the bourne shell.
+
+Whenever you need to work with the VM, just open VS code and start working!
+There is no need to start or to stop the VM at the end/beginning of each day. VM will do that for you.
+
+See you soon!
 
