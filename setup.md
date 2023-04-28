@@ -364,7 +364,19 @@ It will create the Virtualenv for this folder, using Python 3.8 as [specified](h
 
 ### Join the AWS Organization and put credentials in the VM 🔑
 
-TODO ONE POINT
+Everyone should recieve an email with object "DevSecOps formation AWS Credentials" containing the credentials for AWS access.
+
+When connecting for the first time on the console users will be asked to change their passwords.
+
+To configure the credentials using the command line all you have to do is type 
+
+  ```bash
+	  aws configure 
+  ```
+and you will be prompted to enter your `Access_key` & `Secret_key` which can be retrieved from the file recieved by mail.
+is found in the same file recieved 
+
+The same Access and Secret key can be used for the github actions connections
 
 ## Further notes about your VM
 
