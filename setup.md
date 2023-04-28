@@ -366,22 +366,27 @@ It will create the Virtualenv for this folder, using Python 3.8 as [specified](h
 
 Everyone should recieve an email with object "DevSecOps formation AWS Credentials" containing the instructions to join our AWS organization along with your credentials for AWS access.
 
+<img alt="aws-credentials" src="images/aws-credentials.png">
+
 First, log in to your account on the console.
 
-Click on the link and fill the sections with the username and temporary password we provide you in the mail.
+Click on the [link](910402161650.signin.aws.amazon.com/console) and fill the sections with the **username** and temporary **password** we provide you in the mail.
+
+<img alt="aws-login" src="images/aws-login.png">
+
+
 When connecting for the first time on the console users will be asked to change their passwords.
 
 Once it is done, you can now put your aws credentials in the virtual machine to ensure you can also access to aws through the cli.
 
-<img alt="vscode-ssh" src="images/aws-login.png" width=500>
-
 To configure the credentials using the command line all you have to do is open a terminal in VSCode in your Virtual Machine environement and type
 
  ```bash
-aws configure 
+aws configure
  ```
-	
-You will be prompted to enter your `Access_key` & `Secret_key` which can be retreived from the file received by mail.
+
+You will be prompted to enter your `Access_key` & `Secret_key` which can be retrieved from the file received by mail.
+Choose default region `eu-west-1 `for Ireland, to ensure that all the resources we will create will be in AWS Ireland Datacenter!
 
 ## Further notes about your VM
 
