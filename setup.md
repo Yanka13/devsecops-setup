@@ -165,7 +165,7 @@ In case you have any issues, feel free to refer to this [section](<https://learn
 
 - Upload SSH key on Google Form
 
-Fill this [Google Form](https://forms.gle/iWPmNvK6bRn2R1qy9)  so our Engineering team can assign you a virtual machine.
+Fill this [Google Form](https://forms.gle/KaK6q3mN9NwVipds7)  so our Engineering team can assign you a virtual machine.
 Answer the questions by filling out your name, email, and public key you just created.
 
  Make sure that the public keys match this pattern :
@@ -216,7 +216,7 @@ That's the only extension you should install on your _local_ machine, we will in
 <img alt="vscode-connect-to-host" src="https://wagon-public-datasets.s3.amazonaws.com/data-engineering/setup/vscode-connect-to-host.png" width=500>
 
 - Click on `Add a new host`
-- Type `ssh -i <path/to/your/private/key> lewagon@<ip address>`, for instance, with private key at `~/.ssh/ed25519`, with a public IP of `34.77.50.76`, I'll type `ssh -i ~/.ssh/ed25519 lewagon@34.77.50.76` for a Mac/Linux machine and `ssh -i C:\Users\username\.ssh\id_ed25519.pub lewagon@34.77.50.76` for a Windows one.
+- Type `ssh -i <path/to/your/private/key> lewagon@<ip address>`, for instance, with private key at `~/.ssh/ed25519`, with a public IP of `34.77.50.76`, I'll type `ssh -i ~/.ssh/ed25519 lewagon@34.77.50.76` for a Mac/Linux machine and `ssh -i C:\Users\username\.ssh\id_ed25519 lewagon@34.77.50.76` for a Windows one.
 
 <img alt="vscode-ssh-connection-command" src="https://wagon-public-datasets.s3.amazonaws.com/data-engineering/setup/vscode-ssh-connection-command.png" width=500>
 
@@ -364,7 +364,24 @@ It will create the Virtualenv for this folder, using Python 3.8 as [specified](h
 
 ### Join the AWS Organization and put credentials in the VM 🔑
 
-TODO ONE POINT
+Everyone should recieve an email with object "DevSecOps formation AWS Credentials" containing the instructions to join our AWS organization along with your credentials for AWS access.
+
+First, log in to your account on the console.
+
+Click on the link and fill the sections with the username and temporary password we provide you in the mail.
+When connecting for the first time on the console users will be asked to change their passwords.
+
+Once it is done, you can now put your aws credentials in the virtual machine to ensure you can also access to aws through the cli.
+
+<img alt="vscode-ssh" src="images/aws-login.png" width=500>
+
+To configure the credentials using the command line all you have to do is open a terminal in VSCode in your Virtual Machine environement and type
+
+ ```bash
+aws configure 
+ ```
+	
+You will be prompted to enter your `Access_key` & `Secret_key` which can be retreived from the file received by mail.
 
 ## Further notes about your VM
 
