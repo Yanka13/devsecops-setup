@@ -141,7 +141,7 @@ cat < ~/.ssh/id_ed25519.pub
 # <Display the content of the id_ed25519.pub file. Replace ~/.ssh/id_ed25519.pub with your public key path
 ```
 
-Copy the output. 
+Copy the output.
 
 ```ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOkPUdnhB5beA8vzNXbCMz0RJIFISrcm96ZXrfzhtYLO lewagon```
 
