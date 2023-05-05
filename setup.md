@@ -364,7 +364,7 @@ It will create the Virtualenv for this folder, using Python 3.8 as [specified](h
 
 ### Join the AWS Organization and put credentials in the VM 🔑
 
-Everyone should recieve an email with object "DevSecOps formation AWS Credentials" containing the instructions to join our AWS organization along with your credentials for AWS access.
+Everyone should recieve an email with object "Accès AWS pour la formation DevOps (Le Wagon & Onepoint)" containing the instructions to join our AWS organization along with your credentials for AWS access.
 
 <img alt="aws-credentials" src="images/aws-credentials.png">
 
